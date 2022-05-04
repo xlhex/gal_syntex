@@ -15,6 +15,7 @@ This repo contains source code and pre-processed corpora for Generate, Annotate,
 ## Self-training
 
 ## Knowledge Distillation
+Please find code and data [here](https://github.com/xlhex/gal_syntex/tree/main/kd)
 
 ## Citation
 

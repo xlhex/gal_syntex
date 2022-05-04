@@ -1,20 +1,13 @@
-# Generate, Annotate, and Learn: NLP with Synthetic Text
+# Generate, Annotate, and Learn: NLP with Synthetic Text (Knowledge Distillation part)
 
 ## Descriptions
 This repo contains source code and pre-processed corpora for Generate, Annotate, and Learn: NLP with Synthetic Text (accepted to TACL2022) ([paper](https://arxiv.org/abs/2106.06168), [blog](https://synthetic-text.github.io/))
 
 
 ## Dependencies
-* python3
-* [fairseq](https://github.com/pytorch/fairseq) (commit: 58b912f)
-* pytorch>=1.6
-* cuda 10.0
+* requirements.txt
  
-## Synthesizing Text
-
-## Self-training
-
-## Knowledge Distillation
+## Training
 
 ## Citation
 

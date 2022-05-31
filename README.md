@@ -4,6 +4,7 @@
 This repo contains source code and pre-processed corpora for Generate, Annotate, and Learn: NLP with Synthetic Text (accepted to TACL2022) ([paper](https://arxiv.org/abs/2106.06168), [blog](https://synthetic-text.github.io/))
 
 ## Synthesizing Text
+Please find code and data [here](https://github.com/xlhex/gal_syntex/tree/main/gpt2_synthetic_text)
 
 ## Self-training
 

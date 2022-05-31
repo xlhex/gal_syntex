@@ -1,4 +1,4 @@
-# Generate, Annotate, and Learn: NLP with Synthetic Text (Knowledge Distillation part)
+# Generate, Annotate, and Learn: NLP with Synthetic Text (Synthesizing Text part)
 
 ## Descriptions
 This repo contains source code and pre-processed corpora for Generate, Annotate, and Learn: NLP with Synthetic Text (accepted to TACL2022) ([paper](https://arxiv.org/abs/2106.06168), [blog](https://synthetic-text.github.io/))
@@ -8,23 +8,30 @@ This repo contains source code and pre-processed corpora for Generate, Annotate,
 * requirements.txt
 
 ## Preprocessed Data
-We provide the ground-truth data and two types of pseudo-labeled synthetic data [here](https://drive.google.com/file/d/1STm9GWyNUkWhQW-ONfCPadM_rElQ35u3/view?usp=sharing):
-
-* KD data from a single teacher
-* KD data from an ensemble teacher
+The preprocessed data for in-domain fine-tuning can be found [here](https://drive.google.com/file/d/1V4sH14mWxTvAZD81YMt-B2DvY_AiS9DD/view?usp=sharing).
  
-## Training and inference
+## Training
+Here is an example showing how to fine-tune GPT2 on a particular task.
 ```
 TASK= # CoLA, MNLI, MRPC, QNLI, QQP, RTE, SST-2, STS-B 
-seed= # seed for replication
-DATA= # path to kd data
-MNLI_CKPT=None # dir to MNLI checkpoint. Using MNLI checkpoint can boost the performance of RTE, MPRC and STSB tasks. None by default
+LR= # learning rate
+BATCH= # mini-batch size
+UPDATE_FREQ= # How many gradient steps do we need before updating model parameters.
 
-sh run_gal_single.sh $TASK $seed mix_40x $DATA $MNLI_CKPT
+sh run_large.sh $TASK $LR $BATCH $UPDATE_FREQ
+```
+
+## Generating Synthetic Data
+Here is an example showing how to generate synthetic data from the fine-tuned GPT2.
+```
+TASK= # CoLA, MNLI, MRPC, QNLI, QQP, RTE, SST-2, STS-B 
+CKPT= # dir to a fine-tuned GPT2
+seed= # varying this var can generate distinct outputs
+sh run_gen.sh $TASK $CKPT $seed
 ```
 
 ## Trained Models
-We provide our best models for all tasks [here](https://drive.google.com/file/d/17dV0_NaAvgotIKMDPOR8ANmTjAIz1pYp/view?usp=sharing)
+We provide our best generation models for all tasks here
 
 ## Citation
 

@@ -7,6 +7,7 @@ This repo contains source code and pre-processed corpora for Generate, Annotate,
 Please find code and data [here](https://github.com/xlhex/gal_syntex/tree/main/gpt2_synthetic_text)
 
 ## Self-training
+Please find code and data [here](https://github.com/xlhex/gal_syntex/tree/main/self-training)
 
 ## Knowledge Distillation
 Please find code and data [here](https://github.com/xlhex/gal_syntex/tree/main/kd)
